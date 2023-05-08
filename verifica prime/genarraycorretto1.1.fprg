@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ELIADONATOSALERNO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-08 11:38:16 "/>
+        <attribute name="created" value="RUxJQURPTkFUT1NBTEVSTk87REVMTC1EMTg7MjAyMy0wNS0wODsiMTE6MjY6MjAgIjsyOTYy"/>
+        <attribute name="edited" value="RUxJQURPTkFUT1NBTEVSTk87REVMTC1EMTg7MjAyMy0wNS0wODsiMTE6Mzg6MTYgIjsxOzMwNzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vet1" type="Integer" array="True" size="20"/>
+            <declare name="vet2" type="Integer" array="True" size="20"/>
+            <declare name="i, c" type="Integer" array="False" size=""/>
+            <for variable="c" start="0" end="19" direction="inc" step="1">
+                <assign variable="vet1[c]" expression="random(100)"/>
+                <for variable="i" start="0" end="c-1" direction="inc" step="1">
+                    <if expression="vet1[i]==vet1[c] &amp;&amp; c&gt;1">
+                        <then>
+                            <assign variable="vet1[c]" expression="random(100)"/>
+                            <assign variable="i" expression="0"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
